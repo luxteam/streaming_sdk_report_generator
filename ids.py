@@ -1,0 +1,44 @@
+from common import Jobs
+
+REPORT_LINKS = {
+    Jobs.Full_Samples: "FULL_SAMPLES_WEEKLY_REPORT_LINK",
+    Jobs.Win_Full: "WINDOWS_FULL_REPORT_LINK",
+    Jobs.Win_Clumsy: "WINDOWS_CLUMSY_REPORT_LINK",
+    Jobs.Win_Latency: "WINDOWS_LATENCY_REPORT_LINK",
+    Jobs.Win_Long_Term: "WINDOWS_LONG_TERM_REPORT_LINK",
+    Jobs.Android_Full: "ANDROID_FULL_REPORT_LINK",
+    Jobs.Ubuntu_Full: "UBUNTU_FULL_REPORT_LINK",
+    Jobs.AMD_Full: "AMD_FULL_REPORT_LINK",
+}
+
+SUMMARY_TASK_LIST = "SUMMARY_TASK_LIST"
+PLANNED_TASK_LIST = "PLANNED_TASK_LIST"
+ISSUES_BACKLOG_TABLE = "ISSUES_BACKLOG_TABLE"
+
+SKIP_OBS_CASES_TABLE = {
+    Jobs.Win_Full: "SKIPPED_OR_OBSERVED_CASES_WIN_TABLE",
+    Jobs.Android_Full: "SKIPPED_OR_OBSERVED_CASES_ANDROID_TABLE",
+    Jobs.Ubuntu_Full: "SKIPPED_OR_OBSERVED_CASES_LIN_TABLE",
+    Jobs.Full_Samples: "SKIPPED_OR_OBSERVED_CASES_FULL_TABLE",
+}
+
+IDS = [
+    REPORT_LINKS[Jobs.Full_Samples],
+    REPORT_LINKS[Jobs.Win_Full],
+    REPORT_LINKS[Jobs.Win_Clumsy],
+    REPORT_LINKS[Jobs.Android_Full],
+    REPORT_LINKS[Jobs.Ubuntu_Full],
+    REPORT_LINKS[Jobs.AMD_Full],
+    REPORT_LINKS[Jobs.Win_Latency],
+    REPORT_LINKS[Jobs.Win_Long_Term],
+    SUMMARY_TASK_LIST,
+    PLANNED_TASK_LIST,
+    ISSUES_BACKLOG_TABLE,
+    SKIP_OBS_CASES_TABLE[Jobs.Full_Samples],
+    SKIP_OBS_CASES_TABLE[Jobs.Win_Full],
+    SKIP_OBS_CASES_TABLE[Jobs.Ubuntu_Full],
+    SKIP_OBS_CASES_TABLE[Jobs.Android_Full],
+]
+
+# footer ids
+REPORT_PERIOD_FIELD_ID = "REPORT_PERIOD_FIELD"

@@ -5,6 +5,13 @@
 pip install -r requirements.txt
 ```
 
+Set required environment variables:
+- CONFLUENCE_TOKEN
+- JENKINS_USERNAME
+- JENKINS_TOKEN
+- LUXOFT_JIRA_TOKEN
+
+
 ## Usage
 
 ### Generate report:

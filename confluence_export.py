@@ -1,0 +1,63 @@
+import os
+import requests
+from datetime import datetime, timedelta
+from lxml import html
+import json
+
+CONFLUENCE_TOKEN = os.environ["CONFLUENCE_TOKEN"]
+
+
+def _request_confluence_report(report_date: datetime) -> html.Element:
+    url = "https://luxproject.luxoft.com/confluence/rest/api/content"
+
+    headers = {
+        "Accept": "application/json",
+        "Authorization": f"Bearer {CONFLUENCE_TOKEN}",
+    }
+
+    response = requests.get(
+        f"{url}/?title=Status Report - {report_date.strftime('%Y-%m-%d')}&expand=body.storage",
+        headers=headers,
+    )
+
+    # Taking lates available report
+    days = 0
+    while response.json()["size"] == 0:
+        days += 1
+        date = report_date - timedelta(days=days)
+        response = requests.get(
+            f"{url}/?title=Status Report - {date.strftime('%Y-%m-%d')}&expand=body.storage",
+            headers=headers,
+        )
+
+    page_content = response.json()["results"][0]["body"]["storage"]["value"]
+    return html.fromstring(page_content)
+
+
+def get_project_status(report_date: datetime):
+    page = _request_confluence_report(report_date)
+
+    summary = []
+    planned = []
+
+    summary_ul, planned_ul = page.xpath(
+        '//p/span[text()="StreamingSDK:"]/parent::p/following-sibling::ul'
+    )
+
+    for il in summary_ul:
+        summary.append(il.text_content())
+
+    for il in planned_ul:
+        planned.append(il.text_content())
+
+    return summary, planned
+
+
+if __name__ == "__main__":
+    summary, planned = get_project_status(datetime.now())
+
+    print("Summary:")
+    print(json.dumps(summary, indent=4))
+
+    print("Planned:")
+    print(json.dumps(planned, indent=4))
