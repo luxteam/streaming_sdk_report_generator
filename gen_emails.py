@@ -46,6 +46,8 @@ LETTER1_HTML_TABLE = {
 
 LETTER2_HTML_TABLE = "ISSUES_TABLE"
 
+RECIPIENTS_TO = os.getenv("STREAMING_SDK_EMAIL_RECIPIENTS_TO", "")
+RECIPIENTS_CC = os.getenv("STREAMING_SDK_EMAIL_RECIPIENTS_CC", "")
 
 def load_xml(file_path: str):
     tree = None
@@ -79,7 +81,7 @@ def append_row_to_summary_table(tbody: lh.Element, report_type: Reports, report:
 
 
 
-def generate_first_letter():
+def generate_first_letter(recipients_to: str = "", recipients_cc: str = ""):
     html = load_xml("letters_templates/Letter1.html")
 
     for job in [Jobs.Full_Samples, Jobs.Win_Full]:
@@ -121,10 +123,10 @@ def generate_first_letter():
     write_xml(html, html_file)
 
     oft_file = os.path.join(dir, "Letter_1.oft")
-    html2oft(html_file, oft_file, message_subject="Streaming SDK Report")
+    html2oft(html_file, oft_file, message_subject="Streaming SDK Report", recipients_to=recipients_to, recipients_cc=recipients_cc)
 
 
-def generate_second_letter(report_date: datetime):
+def generate_second_letter(report_date: datetime, recipients_to: str = "", recipients_cc: str = ""):
     html = load_xml("letters_templates/Letter2.html")
 
     table = html.find("//table[@id='{id}']".format(id=LETTER2_HTML_TABLE))
@@ -162,16 +164,17 @@ def generate_second_letter(report_date: datetime):
     write_xml(html, html_file)
 
     oft_file = os.path.join(dir, "Letter_2.oft")
-    html2oft(html_file, oft_file, message_subject="Weekly QA Report " + report_date.strftime("%d-%b-%Y"))
+    html2oft(html_file, oft_file, message_subject="Weekly QA Report " + report_date.strftime("%d-%b-%Y"), recipients_to=recipients_to, recipients_cc=recipients_cc)
 
 
-def html2oft(html_file_path: str, otf_file_path: str, recipient: str = "", message_subject: str = ""):
+def html2oft(html_file_path: str, otf_file_path: str, recipients_to: str = "", recipients_cc: str = "", message_subject: str = ""):
     olMailItem = 0x0
     obj = win32com.client.Dispatch("Outlook.Application")
 
     msg = obj.CreateItem(olMailItem)
     msg.Subject = message_subject
-    msg.To = recipient
+    msg.To = recipients_to
+    msg.Cc = recipients_cc
     # olFormatHTML https://msdn.microsoft.com/en-us/library/office/aa219371(v=office.11).aspx
     msg.BodyFormat = 2
     msg.HTMLBody = open(html_file_path).read()
@@ -182,5 +185,5 @@ def html2oft(html_file_path: str, otf_file_path: str, recipient: str = "", messa
 
 if __name__ == "__main__":
     report_date = datetime.today()
-    generate_first_letter()
-    generate_second_letter(report_date)
+    generate_first_letter(recipients_to=RECIPIENTS_TO, recipients_cc=RECIPIENTS_CC)
+    generate_second_letter(recipients_to=RECIPIENTS_TO, recipients_cc=RECIPIENTS_CC, report_date=report_date)
