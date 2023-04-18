@@ -7,6 +7,14 @@ from datetime import timedelta, datetime
 import lxml.html as lh
 from copy import deepcopy
 import urllib
+from enum import Enum
+
+
+class LetterFormat(Enum):
+    OFT = 1
+    HTML = 2
+    ALL = 3
+
 
 reports_titles = {
     Reports.PUBG: "PUBG Report",
@@ -24,9 +32,9 @@ reports_titles = {
 jobs_titles = {
     Jobs.Full_Samples: "Full Samples Streaming SDK autotests",
     Jobs.Win_Full: "Remote Samples Streaming SDK autotests",
-    Jobs.Ubuntu_Full: "Remote Samples Streaming SDK autotests",
-    Jobs.Android_Full: "Remote Samples Streaming SDK autotests",
-    Jobs.AMD_Full: "Remote Samples Streaming SDK autotests",
+    Jobs.Ubuntu_Full: "Linux Streaming SDK autotests",
+    Jobs.Android_Full: "Android Streaming SDK autotests",
+    Jobs.AMD_Full: "AMD Link autotests",
 }
 
 LETTER2_HTML_TABLE = "ISSUES_TABLE"
@@ -78,7 +86,9 @@ def append_row_to_summary_table(
     columns[5].find("./p/span").text = " ".join(timestamp)
 
 
-def generate_first_letter(recipients_to: str = "", recipients_cc: str = ""):
+def generate_first_letter(
+    format: LetterFormat, recipients_to: str = "", recipients_cc: str = ""
+):
     html = load_xml("letters_templates/Letter1.html")
 
     tables_insertion_position = html.find("//div[@id='TABLES_PLACEHOLDER']")
@@ -174,18 +184,24 @@ def generate_first_letter(recipients_to: str = "", recipients_cc: str = ""):
     html_file = os.path.join(dir, "Letter_1.html")
     write_xml(html, html_file)
 
-    oft_file = os.path.join(dir, "Letter_1.oft")
-    html2oft(
-        html_file,
-        oft_file,
-        message_subject="Streaming SDK Report",
-        recipients_to=recipients_to,
-        recipients_cc=recipients_cc,
-    )
+    if format in [LetterFormat.OFT, LetterFormat.ALL]:
+        oft_file = os.path.join(dir, "Letter_1.oft")
+        html2oft(
+            html_file,
+            oft_file,
+            message_subject="Streaming SDK Report",
+            recipients_to=recipients_to,
+            recipients_cc=recipients_cc,
+        )
+        if format == LetterFormat.OFT:
+            os.remove(html_file)
 
 
 def generate_second_letter(
-    report_date: datetime, recipients_to: str = "", recipients_cc: str = ""
+    report_date: datetime,
+    format: LetterFormat,
+    recipients_to: str = "",
+    recipients_cc: str = "",
 ):
     html = load_xml("letters_templates/Letter2.html")
 
@@ -227,14 +243,17 @@ def generate_second_letter(
     html_file = os.path.join(dir, "Letter_2.html")
     write_xml(html, html_file)
 
-    oft_file = os.path.join(dir, "Letter_2.oft")
-    html2oft(
-        html_file,
-        oft_file,
-        message_subject="Weekly QA Report " + report_date.strftime("%d-%b-%Y"),
-        recipients_to=recipients_to,
-        recipients_cc=recipients_cc,
-    )
+    if format in [LetterFormat.OFT, LetterFormat.ALL]:
+        oft_file = os.path.join(dir, "Letter_2.oft")
+        html2oft(
+            html_file,
+            oft_file,
+            message_subject="Weekly QA Report " + report_date.strftime("%d-%b-%Y"),
+            recipients_to=recipients_to,
+            recipients_cc=recipients_cc,
+        )
+        if format == LetterFormat.OFT:
+            os.remove(html_file)
 
 
 def html2oft(
@@ -260,10 +279,36 @@ def html2oft(
 
 
 if __name__ == "__main__":
-    report_date = datetime.today()
-    generate_first_letter(recipients_to=RECIPIENTS_TO, recipients_cc=RECIPIENTS_CC)
-    generate_second_letter(
+    # clean old files
+    dir = os.getcwd()
+    files = [
+        os.path.join(dir, "Letter_1.oft"),
+        os.path.join(dir, "Letter_2.oft"),
+        os.path.join(dir, "Letter_1.html"),
+        os.path.join(dir, "Letter_1.html"),
+    ]
+
+    for file in files:
+        if os.path.exists(file):
+            os.remove(file)
+
+    # generate first letter
+    generate_first_letter(
+        format=LetterFormat.ALL,
         recipients_to=RECIPIENTS_TO,
         recipients_cc=RECIPIENTS_CC,
-        report_date=report_date,
     )
+
+    # generate second letter
+    report_date = datetime.today()
+
+    generate_second_letter(
+        report_date=report_date,
+        format=LetterFormat.ALL,
+        recipients_to=RECIPIENTS_TO,
+        recipients_cc=RECIPIENTS_CC,
+    )
+
+    # generate_first_letter(format=LetterFormat.HTML)
+    # report_date = datetime.today()
+    # generate_second_letter(report_date=report_date, format=LetterFormat.HTML)
