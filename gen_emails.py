@@ -1,5 +1,4 @@
 import os
-import win32com.client
 from common import Reports, Jobs
 from jenkins_export import get_latest_report, get_report_link
 from jira_export import get_issues
@@ -8,6 +7,7 @@ import lxml.html as lh
 from copy import deepcopy
 import urllib
 from enum import Enum
+from emails_convert import html2oft
 
 
 class LetterFormat(Enum):
@@ -254,28 +254,6 @@ def generate_second_letter(
         )
         if format == LetterFormat.OFT:
             os.remove(html_file)
-
-
-def html2oft(
-    html_file_path: str,
-    otf_file_path: str,
-    recipients_to: str = "",
-    recipients_cc: str = "",
-    message_subject: str = "",
-):
-    olMailItem = 0x0
-    obj = win32com.client.Dispatch("Outlook.Application")
-
-    msg = obj.CreateItem(olMailItem)
-    msg.Subject = message_subject
-    msg.To = recipients_to
-    msg.Cc = recipients_cc
-    # olFormatHTML https://msdn.microsoft.com/en-us/library/office/aa219371(v=office.11).aspx
-    msg.BodyFormat = 2
-    msg.HTMLBody = open(html_file_path).read()
-    # newMail.display()
-    save_format = 2  # olTemplate	2	Microsoft Outlook template (.oft)
-    msg.SaveAs(otf_file_path, save_format)
 
 
 if __name__ == "__main__":
