@@ -65,8 +65,17 @@ def append_row_to_summary_table(
     columns[2].find("./p/span").text = str(report["passed"])
     columns[3].find("./p/span").text = str(report["failed"])
     columns[4].find("./p/span").text = str(report["error"])
-    h, m, s = str(timedelta(seconds=int(report["execution_time"]))).split(":")
-    columns[5].find("./p/span").text = f"{h}h {m}m {s}s"
+
+    timestamp = []
+    h, m, s = [
+        int(x) for x in str(timedelta(seconds=int(report["execution_time"]))).split(":")
+    ]
+    if h > 0:
+        timestamp.append("{}h".format(int(h)))
+    timestamp.append("{}m".format(int(m)))
+    timestamp.append("{}s".format(int(s)))
+
+    columns[5].find("./p/span").text = " ".join(timestamp)
 
 
 def generate_first_letter(recipients_to: str = "", recipients_cc: str = ""):
@@ -253,8 +262,8 @@ def html2oft(
 if __name__ == "__main__":
     report_date = datetime.today()
     generate_first_letter(recipients_to=RECIPIENTS_TO, recipients_cc=RECIPIENTS_CC)
-    # generate_second_letter(
-    #     recipients_to=RECIPIENTS_TO,
-    #     recipients_cc=RECIPIENTS_CC,
-    #     report_date=report_date,
-    # )
+    generate_second_letter(
+        recipients_to=RECIPIENTS_TO,
+        recipients_cc=RECIPIENTS_CC,
+        report_date=report_date,
+    )

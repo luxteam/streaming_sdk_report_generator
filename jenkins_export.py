@@ -107,12 +107,17 @@ def get_latest_report(
     json_report = resp.json()
 
     if newer_than is not None:
-        reporting_date = datetime.strptime(
-            list(list(json_report.values())[0]["results"].values())[0][""][
-                "machine_info"
-            ]["reporting_date"],
-            "%m/%d/%Y %H:%M:%S",
+        reporting_date = max(
+            [
+                datetime.strptime(reporting_date, "%m/%d/%Y %H:%M:%S")
+                for reporting_date in [
+                    report[""]["machine_info"]["reporting_date"]
+                    for machine_report in json_report.values()
+                    for report in list(machine_report["results"].values())
+                ]
+            ]
         )
+
         if reporting_date < newer_than:
             return None
 
