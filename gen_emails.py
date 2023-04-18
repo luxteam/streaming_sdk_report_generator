@@ -141,7 +141,7 @@ def generate_first_letter(
             table_section = load_xml("letters_templates/report_table.html")
 
             title_element = table_section.find("//p/span")
-            title_element.text = "{report_name}, server — {server_name}, client 1 — RX 6700XT Win 10 (64bit), client 2 — RX 6700XT Win 10 (64bit):".format(
+            title_element.text = "{report_name} Server part — {server_name}, Client part — RX 6600XT Win 10(64bit):".format(
                 report_name=jobs_titles[job],
                 server_name=machine_name.replace("AMD Radeon ", ""),
             )
