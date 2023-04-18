@@ -1,5 +1,6 @@
 import os
 import requests
+import json
 from requests.auth import HTTPBasicAuth
 from common import Jobs, Reports
 from typing import Dict, Optional
@@ -51,13 +52,13 @@ def get_build_link(job: Jobs, latest_build_number: int):
     return f"http://{JENKINS_HOST}/job/{name}/{latest_build_number}/"
 
 
-def get_latest_build_number(job: Jobs) -> int:
+def get_latest_build_number(job: Jobs) -> Optional[int]:
     name = jobs_names.get(job)
     url = f"http://{JENKINS_HOST}/job/{name}/api/json?tree=lastBuild[id]"
 
     resp = requests.get(url, auth=HTTPBasicAuth(JENKINS_USERNAME, JENKINS_TOKEN))
 
-    last_build = resp.json()['lastBuild']
+    last_build = resp.json()["lastBuild"]
 
     if not last_build:
         return None
@@ -76,7 +77,7 @@ def get_report_link(
             job_name=jobs_names[job],
             build_number=build_number,
             report_name=reports_names[report],
-            report_type="summary_report.json" if json else "test_report.html",
+            report_type="summary_report.json" if json else "summary_report.html",
         )
     )
 
@@ -91,9 +92,7 @@ def get_latest_report(
         return None
 
     report_url = get_report_link(job, build_number, report)
-    resp = requests.get(
-        report_url, auth=HTTPBasicAuth(JENKINS_USERNAME, JENKINS_TOKEN)
-    )
+    resp = requests.get(report_url, auth=HTTPBasicAuth(JENKINS_USERNAME, JENKINS_TOKEN))
 
     while (resp.status_code != 200) and build_number >= 0:
         report_url = get_report_link(job, build_number, report)
@@ -108,17 +107,21 @@ def get_latest_report(
     json_report = resp.json()
 
     if newer_than is not None:
-        reporting_date = datetime.strptime(list(list(json_report.values())[0]['results'].values())[0][""]["machine_info"]["reporting_date"], "%m/%d/%Y %H:%M:%S")
+        reporting_date = datetime.strptime(
+            list(list(json_report.values())[0]["results"].values())[0][""][
+                "machine_info"
+            ]["reporting_date"],
+            "%m/%d/%Y %H:%M:%S",
+        )
         if reporting_date < newer_than:
             return None
-
 
     return {"version": build_number, "report": json_report}
 
 
 def get_skipped_or_observed_per_group(
     job: Jobs, report: Reports = None
-) -> Dict[str, int]:
+) -> Optional[Dict[str, int]]:
     if report is None:
         if job in jobs_representative_reports:
             report = jobs_representative_reports[job]
@@ -137,8 +140,10 @@ def get_skipped_or_observed_per_group(
         machine_name = machine_name[0]
     else:
         machine_name = list(json_report.keys())[0]
-    
-    groups_list = json_report[machine_name]["results"] # report for the AMD 7900 machine prioritized
+
+    groups_list = json_report[machine_name][
+        "results"
+    ]  # report for the AMD 7900 machine prioritized
     skipped_or_observed_per_group = {
         key: groups_list[key][""]["observed"] + groups_list[key][""]["skipped"]
         for key in groups_list
@@ -154,7 +159,13 @@ def get_skipped_or_observed_per_group(
 if __name__ == "__main__":
     print("Runs:")
     for job in Jobs:
-        print(get_build_link(job, get_latest_build_number(job)))
+        id = get_latest_build_number(job)
+        if id is None:
+            print("latest build not found")
+            continue
+
+        print("latest build number: " + str(id))
+        print(get_build_link(job, id))
 
     for job in jobs_representative_reports:
         print(
