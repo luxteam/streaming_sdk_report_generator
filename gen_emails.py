@@ -263,7 +263,7 @@ if __name__ == "__main__":
         os.path.join(dir, "Letter_1.oft"),
         os.path.join(dir, "Letter_2.oft"),
         os.path.join(dir, "Letter_1.html"),
-        os.path.join(dir, "Letter_1.html"),
+        os.path.join(dir, "Letter_2.html"),
     ]
 
     for file in files:
