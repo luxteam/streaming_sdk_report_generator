@@ -28,7 +28,7 @@ class Machines(Enum):
 
 machines_names = {
     Machines.AMD_6750: "AMD Radeon RX 6750 XT Windows 10(64bit)",
-    Machines.AMD_7900: "AMD Radeon RX 7900 XT Windows 10(64bit)"
+    Machines.AMD_7900: "AMD Radeon RX 7900 XT Windows 10(64bit)",
 }
 
 
@@ -41,7 +41,7 @@ LETTER1_HTML_TABLE = {
     Jobs.Win_Full: {
         Machines.AMD_6750: "REMOTE_SAMPLES_6750_TABLE",
         Machines.AMD_7900: "REMOTE_SAMPLES_7900_TABLE"
-    }
+    },
 }
 
 LETTER2_HTML_TABLE = "ISSUES_TABLE"

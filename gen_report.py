@@ -153,6 +153,8 @@ def main():
         link_el_id = ids.REPORT_LINKS[job]
 
         run_number = get_latest_build_number(job)
+        if run_number is None:
+            continue
 
         title = jobs_link_title[job].format(num=run_number)
         link = get_build_link(job, run_number)
@@ -161,7 +163,7 @@ def main():
 
     ##################################################################
     # Update tasks
-    summary, planned = get_project_status(report_date - timedelta(days=5))
+    summary, planned = get_project_status(report_date)
 
     fill_task_list(tree, ids.SUMMARY_TASK_LIST, summary)
     fill_task_list(tree, ids.PLANNED_TASK_LIST, planned)

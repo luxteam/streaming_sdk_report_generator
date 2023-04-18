@@ -10,13 +10,15 @@ CONFLUENCE_TOKEN = os.environ["CONFLUENCE_TOKEN"]
 def _request_confluence_report(report_date: datetime) -> html.Element:
     url = "https://luxproject.luxoft.com/confluence/rest/api/content"
 
+    confluence_report_date = report_date + timedelta(days=1) 
+
     headers = {
         "Accept": "application/json",
         "Authorization": f"Bearer {CONFLUENCE_TOKEN}",
     }
 
     response = requests.get(
-        f"{url}/?title=Status Report - {report_date.strftime('%Y-%m-%d')}&expand=body.storage",
+        f"{url}/?title=Status Report - {confluence_report_date.strftime('%Y-%m-%d')}&expand=body.storage",
         headers=headers,
     )
 
@@ -24,7 +26,7 @@ def _request_confluence_report(report_date: datetime) -> html.Element:
     days = 0
     while response.json()["size"] == 0:
         days += 1
-        date = report_date - timedelta(days=days)
+        date = confluence_report_date - timedelta(days=days)
         response = requests.get(
             f"{url}/?title=Status Report - {date.strftime('%Y-%m-%d')}&expand=body.storage",
             headers=headers,

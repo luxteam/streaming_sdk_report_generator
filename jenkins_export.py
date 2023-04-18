@@ -57,7 +57,12 @@ def get_latest_build_number(job: Jobs) -> int:
 
     resp = requests.get(url, auth=HTTPBasicAuth(JENKINS_USERNAME, JENKINS_TOKEN))
 
-    id = resp.json()["lastBuild"]["id"]
+    last_build = resp.json()['lastBuild']
+
+    if not last_build:
+        return None
+
+    id = last_build["id"]
 
     return int(id)
 
@@ -82,6 +87,8 @@ def get_latest_report(
     job: Jobs, report: Reports, newer_than: Optional[datetime] = None
 ) -> Optional[dict]:
     build_number = get_latest_build_number(job)
+    if build_number is None:
+        return None
 
     report_url = get_report_link(job, build_number, report)
     resp = requests.get(
@@ -125,9 +132,13 @@ def get_skipped_or_observed_per_group(
 
     json_report = latest_report["report"]
 
-    machine_name = [machine for machine in json_report.keys() if "7900" in machine][0]
+    machine_name = [machine for machine in json_report.keys() if "7900" in machine]
+    if machine_name:
+        machine_name = machine_name[0]
+    else:
+        machine_name = list(json_report.keys())[0]
     
-    groups_list = json_report[machine_name]["results"] # report for the AMD 7900 machine
+    groups_list = json_report[machine_name]["results"] # report for the AMD 7900 machine prioritized
     skipped_or_observed_per_group = {
         key: groups_list[key][""]["observed"] + groups_list[key][""]["skipped"]
         for key in groups_list
@@ -142,15 +153,15 @@ def get_skipped_or_observed_per_group(
 
 if __name__ == "__main__":
     print("Runs:")
-    # for job in Jobs:
-    #     print(get_build_link(job, get_latest_build_number(job)))
+    for job in Jobs:
+        print(get_build_link(job, get_latest_build_number(job)))
 
-    # for job in jobs_representative_reports:
-    #     print(
-    #         json.dumps(
-    #             get_skipped_or_observed_per_group(
-    #                 job, jobs_representative_reports[job]
-    #             ),
-    #             indent=4,
-    #         )
-    #     )
+    for job in jobs_representative_reports:
+        print(
+            json.dumps(
+                get_skipped_or_observed_per_group(
+                    job, jobs_representative_reports[job]
+                ),
+                indent=4,
+            )
+        )
