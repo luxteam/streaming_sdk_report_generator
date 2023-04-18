@@ -37,6 +37,14 @@ jobs_titles = {
     Jobs.AMD_Full: "AMD Link autotests",
 }
 
+client_parts = {
+    Jobs.Full_Samples: "RX 6600XT Win 10(64bit)",
+    Jobs.Win_Full: "RX 6600XT Win 10(64bit)",
+    Jobs.Ubuntu_Full: "RX 6600XT Win 10(64bit)",
+    Jobs.AMD_Full: "RX 6600XT Win 10(64bit)",
+    Jobs.Android_Full: "Adreno 619 Android (REALME 9 Pro)",
+}
+
 LETTER2_HTML_TABLE = "ISSUES_TABLE"
 
 RECIPIENTS_TO = os.getenv("STREAMING_SDK_EMAIL_RECIPIENTS_TO", "")
@@ -141,9 +149,10 @@ def generate_first_letter(
             table_section = load_xml("letters_templates/report_table.html")
 
             title_element = table_section.find("//p/span")
-            title_element.text = "{report_name} Server part — {server_name}, Client part — RX 6600XT Win 10(64bit):".format(
+            title_element.text = "{report_name} Server part — {server_part}, Client part — {client_part}:".format(
                 report_name=jobs_titles[job],
-                server_name=machine_name.replace("AMD Radeon ", ""),
+                server_part=machine_name.replace("AMD Radeon ", ""),
+                client_part=client_parts[job],
             )
 
             table = table_section.find("//table")
