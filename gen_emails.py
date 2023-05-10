@@ -38,10 +38,10 @@ jobs_titles = {
 }
 
 client_parts = {
-    Jobs.Full_Samples: "RX 6600XT Win 10 (64bit)",
-    Jobs.Win_Full: "RX 6600XT Win 10 (64bit)",
-    Jobs.Ubuntu_Full: "RX 6600XT Win 10 (64bit)",
-    Jobs.AMD_Full: "RX 6600XT Win 10 (64bit)",
+    Jobs.Full_Samples: "RX 6600XT Windows 10 (64bit)",
+    Jobs.Win_Full: "RX 6600XT Windows 10 (64bit)",
+    Jobs.Ubuntu_Full: "RX 6600XT Windows 10 (64bit)",
+    Jobs.AMD_Full: "RX 6600XT Windows 10 (64bit)",
     Jobs.Android_Full: "Adreno 619 Android (REALME 9 Pro)",
 }
 
