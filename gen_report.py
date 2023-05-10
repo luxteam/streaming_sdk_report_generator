@@ -148,6 +148,7 @@ def main():
 
     ##################################################################
     # Update jobs latest run links
+    print("Step 1/6 - Updating jobs' runs latest links...")
 
     for job in Jobs:
         link_el_id = ids.REPORT_LINKS[job]
@@ -163,6 +164,8 @@ def main():
 
     ##################################################################
     # Update tasks
+    print("Step 2/6 - Constructing task list...")
+
     summary, planned = get_project_status(report_date)
 
     fill_task_list(tree, ids.SUMMARY_TASK_LIST, summary)
@@ -170,11 +173,15 @@ def main():
 
     ##################################################################
     # Issues backlog table
+    print("Step 3/6 - Constructing issue table...")
+
     issues = get_issues()
     fill_issues_table(tree, issues)
 
     ##################################################################
     # Skipped or observed tables
+    print("Step 4/6 - Constructing skipped and observed tables")
+
     for job in ids.SKIP_OBS_CASES_TABLE:
         table_id = ids.SKIP_OBS_CASES_TABLE[job]
         skip_or_obs_cases_per_group = get_skipped_or_observed_per_group(job)
@@ -182,11 +189,13 @@ def main():
 
     ##################################################################
     # save report document.xml
+
     word.write_xml(tree, word.DOCUMENT_PATH)
 
     ##################################################################
     # update footer
-    
+    print("Step 5/6 - Updating footer...")
+
     # load footer.xml
     footer_tree = word.load_xml(word.FOOTER_PATH)
 
@@ -202,6 +211,8 @@ def main():
 
     ##################################################################
     # combine files into docx
+    print("Step 6/6 - Saving report...")
+
     finalize_report()
 
     print(f"Report '{REPORT_FILE_PATH}' generated!")
