@@ -450,7 +450,7 @@
         </w:rPr>
         <w:t xml:space="preserve">XiaomiTVStick TV Box report: </w:t>
       </w:r>
-      <w:hyperlink id="XIAOMI_TV_REPORT_LINK" r:id="rId13" w:history="1">
+      <w:hyperlink id="XIAOMI_TV_REPORT_LINK" r:id="rId24" w:history="1">
         <w:proofErr w:type="spellStart" />
         <w:r w:rsidR="006A30DC">
           <w:rPr>
@@ -498,7 +498,7 @@
         </w:rPr>
         <w:t xml:space="preserve">Chromecast TV Box report: </w:t>
       </w:r>
-      <w:hyperlink id="CHROMECAST_TV_REPORT_LINK" r:id="rId13" w:history="1">
+      <w:hyperlink id="CHROMECAST_TV_REPORT_LINK" r:id="rId25" w:history="1">
         <w:proofErr w:type="spellStart" />
         <w:r w:rsidR="006A30DC">
           <w:rPr>
