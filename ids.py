@@ -3,10 +3,12 @@ from common import Jobs
 REPORT_LINKS = {
     Jobs.Full_Samples: "FULL_SAMPLES_WEEKLY_REPORT_LINK",
     Jobs.Win_Full: "WINDOWS_FULL_REPORT_LINK",
-    Jobs.Win_Clumsy: "WINDOWS_CLUMSY_REPORT_LINK",
+    Jobs.Win_APU: "APU_CLIENT_REPORT_LINK",
     Jobs.Win_Latency: "WINDOWS_LATENCY_REPORT_LINK",
     Jobs.Win_Long_Term: "WINDOWS_LONG_TERM_REPORT_LINK",
     Jobs.Android_Full: "ANDROID_FULL_REPORT_LINK",
+    Jobs.Android_Xiaomi_TV: "XIAOMI_TV_REPORT_LINK",
+    Jobs.Android_Chromecast_TV: "CHROMECAST_TV_REPORT_LINK",
     Jobs.Ubuntu_Full: "UBUNTU_FULL_REPORT_LINK",
     Jobs.AMD_Full: "AMD_FULL_REPORT_LINK",
 }
@@ -25,8 +27,10 @@ SKIP_OBS_CASES_TABLE = {
 IDS = [
     REPORT_LINKS[Jobs.Full_Samples],
     REPORT_LINKS[Jobs.Win_Full],
-    REPORT_LINKS[Jobs.Win_Clumsy],
+    REPORT_LINKS[Jobs.Win_APU],
     REPORT_LINKS[Jobs.Android_Full],
+    REPORT_LINKS[Jobs.Android_Xiaomi_TV],
+    REPORT_LINKS[Jobs.Android_Chromecast_TV],
     REPORT_LINKS[Jobs.Ubuntu_Full],
     REPORT_LINKS[Jobs.AMD_Full],
     REPORT_LINKS[Jobs.Win_Latency],

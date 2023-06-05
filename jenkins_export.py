@@ -15,8 +15,10 @@ JENKINS_TOKEN = os.environ["JENKINS_TOKEN"]
 jobs_names = {
     Jobs.Full_Samples: "FullSamples-Weekly",
     Jobs.Win_Full: "StreamingSDK-Windows-WeeklyFull",
-    Jobs.Win_Clumsy: "StreamingSDK-Clumsy",
+    Jobs.Win_APU: "StreamingSDK-APU-WeeklyFull",
     Jobs.Android_Full: "StreamingSDK-Android-WeeklyFull",
+    Jobs.Android_Xiaomi_TV: "StreamingSDK-XiaomiTVStick-WeeklyFull",
+    Jobs.Android_Chromecast_TV: "StreamingSDK-Chromecast-WeeklyFull",
     Jobs.Ubuntu_Full: "StreamingSDK-Ubuntu-WeeklyFull",
     Jobs.AMD_Full: "AMDLink-Weekly",
     Jobs.Win_Latency: "StreamingSDK-LatencyTests",

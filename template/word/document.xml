@@ -255,9 +255,9 @@
           <w:szCs w:val="21" />
           <w:lang w:val="en-US" />
         </w:rPr>
-        <w:t xml:space="preserve">Clumsy weekly report: </w:t>
+        <w:t xml:space="preserve">APU Client report: </w:t>
       </w:r>
-      <w:hyperlink id="WINDOWS_CLUMSY_REPORT_LINK" r:id="rId13" w:history="1">
+      <w:hyperlink id="APU_CLIENT_REPORT_LINK" r:id="rId13" w:history="1">
         <w:proofErr w:type="spellStart" />
         <w:r w:rsidR="006A30DC">
           <w:rPr>
@@ -268,7 +268,7 @@
             <w:szCs w:val="21" />
             <w:lang w:val="en-US" />
           </w:rPr>
-          <w:t>StreamingSDK-Clumsy #10</w:t>
+          <w:t>StreamingSDK-APU-WeeklyFull</w:t>
         </w:r>
       </w:hyperlink>
     </w:p>
@@ -418,6 +418,102 @@
         </w:r>
       </w:hyperlink>
     </w:p>
+
+    <w:p w14:paraId="68B5A215" w14:textId="79F27D42" w:rsidR="0039057A" w:rsidRPr="0045349B"
+      w:rsidRDefault="0039057A" w:rsidP="0039057A">
+      <w:pPr>
+        <w:pStyle w:val="a9" />
+        <w:keepNext />
+        <w:numPr>
+          <w:ilvl w:val="2" />
+          <w:numId w:val="1" />
+        </w:numPr>
+        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" />
+        <w:spacing w:after="0" />
+        <w:rPr>
+          <w:rFonts w:ascii="Segoe UI" w:eastAsia="Times New Roman" w:hAnsi="Segoe UI"
+            w:cs="Segoe UI" />
+          <w:color w:val="auto" />
+          <w:sz w:val="21" />
+          <w:szCs w:val="21" />
+          <w:lang w:val="en-US" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Segoe UI" w:eastAsia="Times New Roman" w:hAnsi="Segoe UI"
+            w:cs="Segoe UI" />
+          <w:color w:val="auto" />
+          <w:sz w:val="21" />
+          <w:szCs w:val="21" />
+          <w:lang w:val="en-US" />
+        </w:rPr>
+        <w:t xml:space="preserve">XiaomiTVStick TV Box report: </w:t>
+      </w:r>
+      <w:hyperlink id="XIAOMI_TV_REPORT_LINK" r:id="rId13" w:history="1">
+        <w:proofErr w:type="spellStart" />
+        <w:r w:rsidR="006A30DC">
+          <w:rPr>
+            <w:rStyle w:val="aa" />
+            <w:rFonts w:ascii="Segoe UI" w:eastAsia="Times New Roman" w:hAnsi="Segoe UI"
+              w:cs="Segoe UI" />
+            <w:sz w:val="21" />
+            <w:szCs w:val="21" />
+            <w:lang w:val="en-US" />
+          </w:rPr>
+          <w:t>StreamingSDK-XiaomiTVStick-Weekly</w:t>
+        </w:r>
+      </w:hyperlink>
+    </w:p>
+
+
+    <w:p w14:paraId="68B5A215" w14:textId="79F27D42" w:rsidR="0039057A" w:rsidRPr="0045349B"
+      w:rsidRDefault="0039057A" w:rsidP="0039057A">
+      <w:pPr>
+        <w:pStyle w:val="a9" />
+        <w:keepNext />
+        <w:numPr>
+          <w:ilvl w:val="2" />
+          <w:numId w:val="1" />
+        </w:numPr>
+        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" />
+        <w:spacing w:after="0" />
+        <w:rPr>
+          <w:rFonts w:ascii="Segoe UI" w:eastAsia="Times New Roman" w:hAnsi="Segoe UI"
+            w:cs="Segoe UI" />
+          <w:color w:val="auto" />
+          <w:sz w:val="21" />
+          <w:szCs w:val="21" />
+          <w:lang w:val="en-US" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Segoe UI" w:eastAsia="Times New Roman" w:hAnsi="Segoe UI"
+            w:cs="Segoe UI" />
+          <w:color w:val="auto" />
+          <w:sz w:val="21" />
+          <w:szCs w:val="21" />
+          <w:lang w:val="en-US" />
+        </w:rPr>
+        <w:t xml:space="preserve">Chromecast TV Box report: </w:t>
+      </w:r>
+      <w:hyperlink id="CHROMECAST_TV_REPORT_LINK" r:id="rId13" w:history="1">
+        <w:proofErr w:type="spellStart" />
+        <w:r w:rsidR="006A30DC">
+          <w:rPr>
+            <w:rStyle w:val="aa" />
+            <w:rFonts w:ascii="Segoe UI" w:eastAsia="Times New Roman" w:hAnsi="Segoe UI"
+              w:cs="Segoe UI" />
+            <w:sz w:val="21" />
+            <w:szCs w:val="21" />
+            <w:lang w:val="en-US" />
+          </w:rPr>
+          <w:t>StreamingSDK-Chromecast-Weekly</w:t>
+        </w:r>
+      </w:hyperlink>
+    </w:p>
+
     <w:p w14:paraId="104148D2" w14:textId="44C0EE45" w:rsidR="005208CA" w:rsidRPr="009E65F7"
       w:rsidRDefault="00E024F3" w:rsidP="00196F9F">
       <w:pPr>

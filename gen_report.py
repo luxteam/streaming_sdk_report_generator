@@ -17,8 +17,10 @@ from lxml import etree
 jobs_link_title = {
     Jobs.Full_Samples: "FullSamples-Weekly #{num}",
     Jobs.Win_Full: "StreamingSDK-Windows-WeeklyFull #{num}",
-    Jobs.Win_Clumsy: "StreamingSDK-Clumsy #{num}",
+    Jobs.Win_APU: "StreamingSDK-APU-WeeklyFull #{num}",
     Jobs.Android_Full: "StreamingSDK-Android-Weekly #{num}",
+    Jobs.Android_Xiaomi_TV: "StreamingSDK-XiaomiTVStick-Weekly #{num}",
+    Jobs.Android_Chromecast_TV: "StreamingSDK-Chromecast-Weekly #{num}",
     Jobs.Ubuntu_Full: "StreamingSDK-Ubuntu-WeeklyFull #{num}",
     Jobs.AMD_Full: "AMDLink-Windows-WeeklyFull #{num}",
     Jobs.Win_Latency: "StreamingSDK-LatencyTests #{num}",
