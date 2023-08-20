@@ -108,6 +108,10 @@ def get_latest_report(
 
     json_report = resp.json()
 
+    if not json_report:
+        print(f"WARNING: JSON report for {report_url} is not available!")
+        return None
+
     if newer_than is not None:
         reporting_date = max(
             [
