@@ -290,23 +290,23 @@ if __name__ == "__main__":
         if os.path.exists(file):
             os.remove(file)
 
-    # # generate first letter
-    # generate_first_letter(
-    #     format=LetterFormat.ALL,
-    #     recipients_to=RECIPIENTS_TO,
-    #     recipients_cc=RECIPIENTS_CC,
-    # )
+    # generate first letter
+    generate_first_letter(
+        format=LetterFormat.ALL,
+        recipients_to=RECIPIENTS_TO,
+        recipients_cc=RECIPIENTS_CC,
+    )
 
-    # # generate second letter
-    # report_date = datetime.today()
-
-    # generate_second_letter(
-    #     report_date=report_date,
-    #     format=LetterFormat.ALL,
-    #     recipients_to=RECIPIENTS_TO,
-    #     recipients_cc=RECIPIENTS_CC,
-    # )
-
-    generate_first_letter(format=LetterFormat.HTML)
+    # generate second letter
     report_date = datetime.today()
-    generate_second_letter(report_date=report_date, format=LetterFormat.HTML)
+
+    generate_second_letter(
+        report_date=report_date,
+        format=LetterFormat.ALL,
+        recipients_to=RECIPIENTS_TO,
+        recipients_cc=RECIPIENTS_CC,
+    )
+
+    # generate_first_letter(format=LetterFormat.HTML)
+    # report_date = datetime.today()
+    # generate_second_letter(report_date=report_date, format=LetterFormat.HTML)

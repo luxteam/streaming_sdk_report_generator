@@ -24,13 +24,17 @@ def _request_confluence_report(report_date: datetime) -> html.Element:
 
     # Taking lates available report
     days = 0
-    while response.json()["size"] == 0:
+    while response.json()["size"] == 0 and days < 7:
         days += 1
         date = confluence_report_date - timedelta(days=days)
         response = requests.get(
             f"{url}/?title=Status Report - {date.strftime('%Y-%m-%d')}&expand=body.storage",
             headers=headers,
         )
+    
+    if days >= 7:
+        print("ERROR: Confluence token is invalid!")
+        exit(-1)
 
     page_content = response.json()["results"][0]["body"]["storage"]["value"]
     return html.fromstring(page_content)

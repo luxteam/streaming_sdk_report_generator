@@ -109,8 +109,16 @@ def get_latest_report(
     json_report = resp.json()
 
     if not json_report:
-        print(f"WARNING: JSON report for {report_url} is not available!")
+        print(f"WARNING: JSON report {report_url} is not available!")
         return None
+    
+
+    for machine_report in json_report.values():
+        for report in list(machine_report["results"].values()):
+            if not report[""].get("machine_info"):
+                print(f"ERROR: Report {report_url} is broken!")
+                return None
+
 
     if newer_than is not None:
         reporting_date = max(
@@ -178,6 +186,7 @@ if __name__ == "__main__":
         print("latest build number: " + str(id))
         print(get_build_link(job, id))
 
+    print("Representative reports:")
     for job in jobs_representative_reports:
         print(
             json.dumps(
@@ -187,3 +196,15 @@ if __name__ == "__main__":
                 indent=4,
             )
         )
+
+    # print("Reports")
+    # for job in Jobs:
+    #     for report in Reports:
+    #         print(
+    #             json.dumps(
+    #                 get_latest_report(
+    #                     job, report
+    #                 ),
+    #                 indent=4,
+    #             )
+    #         )
