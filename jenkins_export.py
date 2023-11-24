@@ -5,6 +5,7 @@ from requests.auth import HTTPBasicAuth
 from common import Jobs, Reports
 from typing import Dict, Optional
 from datetime import datetime
+from http import HTTPStatus
 
 JENKINS_HOST = os.getenv("JENKINS_HOST", "rpr.cis.luxoft.com")
 CIS_HOST = os.getenv("CIS_HOST", "cis.nas.luxoft.com")
@@ -60,6 +61,10 @@ def get_latest_build_number(job: Jobs) -> Optional[int]:
 
     resp = requests.get(url, auth=HTTPBasicAuth(JENKINS_USERNAME, JENKINS_TOKEN))
 
+    if resp.status_code == HTTPStatus.UNAUTHORIZED:
+        print("ERROR: Jenkins token in env var 'JENKINS_TOKEN' is invalid!")
+        exit(-1)
+
     last_build = resp.json()["lastBuild"]
 
     if not last_build:
@@ -95,6 +100,10 @@ def get_latest_report(
 
     report_url = get_report_link(job, build_number, report)
     resp = requests.get(report_url, auth=HTTPBasicAuth(JENKINS_USERNAME, JENKINS_TOKEN))
+
+    if resp.status_code == HTTPStatus.UNAUTHORIZED:
+        print("ERROR: Jenkins token in env var 'JENKINS_TOKEN' is invalid!")
+        exit(-1)
 
     while (resp.status_code != 200) and build_number >= 0:
         report_url = get_report_link(job, build_number, report)

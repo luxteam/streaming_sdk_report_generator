@@ -16,6 +16,15 @@ jira_instance = Jira(
     cloud=False,
 )
 
+def validate_token():
+    issues = jira_instance.jql("")
+    if issues['total'] == 0:
+        print("ERROR: Jira token 'JIRA_TOKEN' is invalid!")
+        exit(-1)
+
+
+# validate token on module's load
+validate_token()
 
 def get_issues() -> List[Issue]:
     jql_request = 'project = STVITT AND issuetype = Defect AND status in (Open, "In Progress", Suspended, Resolved, Deferred) AND labels = StreamingSDK'
@@ -44,4 +53,4 @@ if __name__ == "__main__":
     issues = get_issues()
     print("Issues:")
     for issue in issues:
-        print(f"{issue.key}: ({issue.severity}) : {issue.summary} [{issue.created_at}] ({issue.link})")
+        print(f"{issue.key}: ({issue.severity}) : {issue.summary} [{issue.created_at}] ({issue.url})")

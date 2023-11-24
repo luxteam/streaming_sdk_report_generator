@@ -6,6 +6,25 @@ import json
 
 CONFLUENCE_TOKEN = os.environ["CONFLUENCE_TOKEN"]
 
+def validate_token():
+    headers = {
+        "Accept": "application/json",
+        "Authorization": f"Bearer {CONFLUENCE_TOKEN}",
+    }
+
+    response = requests.get(
+        "https://luxproject.luxoft.com/confluence/rest/api/user/current",
+        headers=headers,
+    )
+
+    if response.json()['type'] == "anonymous": 
+        print("ERROR: Confluence token 'CONFLUENCE_TOKEN' is invalid!")
+        exit(-1)
+
+
+# validate token on module's load
+validate_token()
+
 
 def _request_confluence_report(report_date: datetime) -> html.Element:
     url = "https://luxproject.luxoft.com/confluence/rest/api/content"
