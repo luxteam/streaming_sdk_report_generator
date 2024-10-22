@@ -3,6 +3,7 @@ import requests
 from datetime import datetime, timedelta
 from lxml import html
 import json
+from bs4 import BeautifulSoup
 
 CONFLUENCE_TOKEN = os.environ["CONFLUENCE_TOKEN"]
 
@@ -56,7 +57,9 @@ def _request_confluence_report(report_date: datetime) -> html.Element:
         exit(-1)
 
     page_content = response.json()["results"][0]["body"]["storage"]["value"]
-    return html.fromstring(page_content)
+    soup = BeautifulSoup(page_content, 'html.parser')
+    table = soup.get_text()
+    return table
 
 
 def get_project_status(report_date: datetime):
