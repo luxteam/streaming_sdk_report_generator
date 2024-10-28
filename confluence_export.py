@@ -59,7 +59,7 @@ def _request_confluence_report(report_date: datetime) -> html.Element:
     page_content = response.json()["results"][0]["body"]["storage"]["value"]
     soup = BeautifulSoup(page_content, 'html.parser')
     table = soup.get_text()
-    return table
+    return html.fromstring(table)
 
 
 def get_project_status(report_date: datetime):
