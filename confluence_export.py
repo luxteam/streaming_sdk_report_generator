@@ -71,7 +71,7 @@ def get_project_status(report_date: datetime):
     rows = table_body.find_all('tr')
     for row in rows:
         cell1 = row.find(string=re.compile("SSDK:"))
-        cell2 = row.find(string=re.compile("DONE","IN PROGRESS"))
+        cell2 = row.find(string=re.compile("(DONE|IN PROGRESS)"))
         try:
             cell_data1 = cell1.get_text()
             cell_data2 = cell2.get_text()
