@@ -66,20 +66,31 @@ def _request_confluence_report(report_date: datetime) -> html.Element:
 def get_project_status(report_date: datetime):
     page = _request_confluence_report(report_date)
 
-    data = []
+    summary_data = []
     table_body = page.find('tbody')
     rows = table_body.find_all('tr')
+
     for row in rows:
         cell1 = row.find(string=re.compile("SSDK:"))
         cell2 = row.find(string=re.compile("(DONE|IN PROGRESS)"))
         try:
             cell_data1 = cell1.get_text()
             cell_data2 = cell2.get_text()
-            data.append(cell_data1)
+            summary_data.append(cell_data1)
         except:
             continue
 
-    return data
+    for row in rows:
+        cell1 = row.find(string=re.compile("AMF test farm:"))
+        cell2 = row.find(string=re.compile("(DONE|IN PROGRESS)"))
+        try:
+            cell_data1 = cell1.get_text()
+            cell_data2 = cell2.get_text()
+            summary_data.append(cell_data1)
+        except:
+            continue
+
+    return summary_data
 
 
 if __name__ == "__main__":
