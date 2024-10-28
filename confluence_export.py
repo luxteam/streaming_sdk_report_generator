@@ -58,20 +58,19 @@ def _request_confluence_report(report_date: datetime) -> html.Element:
 
     page_content = response.json()["results"][0]["body"]["storage"]["value"]
     soup = BeautifulSoup(page_content, 'lxml')
-    return soup
+    table = soup.find('StreamingSDK')
+    rows = table.find_all('tr')
+    for row in rows:
+        cells = row.find_all(['td', 'th'])
+        cell_data = [cell.get_text(strip=True) for cell in cells]
+        return cell_data
 
 
 def get_project_status(report_date: datetime):
     page = _request_confluence_report(report_date)
-    target = page.find('h1',id='StatusReport20241024-StreamingSDK')
-    summary =[]
-    for sib in target.find_next_siblings():
-        if sib.name=="h1":
-            break
-        else:
-            summary.append(sib.text)
 
-    return summary
+
+    return page
 
 
 if __name__ == "__main__":
