@@ -66,6 +66,8 @@ def _request_confluence_report(report_date: datetime) -> html.Element:
         cell_data = [cell.get_text(strip=True) for cell in cells]
         data.append(cell_data)
 
+    return data
+
 
 def get_project_status(report_date: datetime):
     page = _request_confluence_report(report_date)
