@@ -70,10 +70,13 @@ def get_project_status(report_date: datetime):
     table_body = page.find('tbody')
     rows = table_body.find_all('tr')
     for row in rows:
-        cell = row.find(string=re.compile("SSDK:"))
+        cell1 = row.find(string=re.compile("SSDK:"))
+        cell2 = row.find(string=re.compile("DONE"))
         try:
-            cell_data = cell.get_text()
-            data.append(cell_data)
+            cell_data1 = cell1.get_text()
+            cell_data2 = cell2.get_text()
+            data.append(cell_data1)
+            data.append(cell_data2)
         except:
             continue
 
