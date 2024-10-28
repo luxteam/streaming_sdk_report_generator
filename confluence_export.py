@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 from lxml import html
 import json
 from bs4 import BeautifulSoup
+import re
 
 CONFLUENCE_TOKEN = os.environ["CONFLUENCE_TOKEN"]
 
@@ -70,7 +71,8 @@ def get_project_status(report_date: datetime):
     rows = table_body.find_all('tr')
     for row in rows:
         cells = row.find_all('td')
-        cell_data = [for cell in cells.stripped_strings]
+        content = cells.find(string=re.compile("SSDK"))
+        cell_data = [cell.get_text(strip=True) for cell in content]
         data.append(cell_data)
 
     return data
