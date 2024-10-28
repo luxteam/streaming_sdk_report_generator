@@ -63,7 +63,7 @@ def _request_confluence_report(report_date: datetime) -> html.Element:
 
 def get_project_status(report_date: datetime):
     page = _request_confluence_report(report_date)
-    target = page.find('h1',string='StreamingSDK')
+    target = page.find('h1',id='StatusReport20241024-StreamingSDK')
     summary =[]
     for sib in target.find_next_siblings():
         if sib.name=="h1":
