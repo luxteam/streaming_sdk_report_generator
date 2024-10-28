@@ -168,9 +168,10 @@ def main():
     # Update tasks
     print("Step 2/6 - Constructing task list...")
 
-    summary = get_project_status(report_date)
+    summary, planned = get_project_status(report_date)
 
     fill_task_list(tree, ids.SUMMARY_TASK_LIST, summary)
+    fill_task_list(tree, ids.PLANNED_TASK_LIST, planned)
 
     ##################################################################
     # Issues backlog table

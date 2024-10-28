@@ -67,6 +67,7 @@ def get_project_status(report_date: datetime):
     page = _request_confluence_report(report_date)
 
     summary_data = []
+    planned_data = []
     table_body = page.find('tbody')
     rows = table_body.find_all('tr')
 
@@ -90,12 +91,35 @@ def get_project_status(report_date: datetime):
         except:
             continue
 
-    return summary_data
+    for row in rows:
+        cell1 = row.find(string=re.compile("SSDK:"))
+        cell2 = row.find(string=re.compile("(IN PROGRESS|PLANNED|HOLD)"))
+        try:
+            cell_data1 = cell1.get_text()
+            cell_data2 = cell2.get_text()
+            planned_data.append(cell_data1)
+        except:
+            continue
+
+    for row in rows:
+        cell1 = row.find(string=re.compile("AMF test farm:"))
+        cell2 = row.find(string=re.compile("(IN PROGRESS|PLANNED|HOLD)"))
+        try:
+            cell_data1 = cell1.get_text()
+            cell_data2 = cell2.get_text()
+            planned_data.append(cell_data1)
+        except:
+            continue
+
+    return summary_data, planned_data
 
 
 if __name__ == "__main__":
-    summary = get_project_status(datetime.now())
+    summary, planned = get_project_status(datetime.now())
 
     print("Summary:")
     print(json.dumps(summary, indent=4))
+
+    print("Planned:")
+    print(json.dumps(planned, indent=4))
 
