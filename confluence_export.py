@@ -72,13 +72,8 @@ def get_project_status(report_date: datetime):
         cells = row.find_all('td')
         cell_data = [cell.get_text(strip=True) for cell in cells]
         data.append(cell_data)
-    content = []
-    for row in data:
-        cells = row.find_all('title')
-        cell_data = [cell.get_text(strip=True) for cell in cells]
-        content.append(cell_data)
 
-    return content
+    return data
 
 
 if __name__ == "__main__":
