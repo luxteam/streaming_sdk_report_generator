@@ -58,7 +58,7 @@ def _request_confluence_report(report_date: datetime) -> html.Element:
 
     page_content = response.json()["results"][0]["body"]["storage"]["value"]
     soup = BeautifulSoup(page_content, 'lxml')
-    table = soup.find('main-content')
+    table = soup.find(id='main-content')
     rows = table.find_all('tr')
     for row in rows:
         cells = row.find_all('td')
