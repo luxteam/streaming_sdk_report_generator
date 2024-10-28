@@ -76,7 +76,6 @@ def get_project_status(report_date: datetime):
             cell_data1 = cell1.get_text()
             cell_data2 = cell2.get_text()
             data.append(cell_data1)
-            data.append(cell_data2)
         except:
             continue
 
