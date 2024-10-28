@@ -68,7 +68,7 @@ def get_project_status(report_date: datetime):
     summary = []
     planned = []
 
-    summary_ul, planned_ul = page.str(
+    summary_ul, planned_ul = page.xpath(
         '//p/span[text()="StreamingSDK:"]/parent::p/following-sibling::ul'
     )
 
