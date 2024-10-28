@@ -65,20 +65,9 @@ def _request_confluence_report(report_date: datetime) -> html.Element:
 def get_project_status(report_date: datetime):
     page = _request_confluence_report(report_date)
 
-    summary = []
-    planned = []
+    summary_ul= page
 
-    summary_ul, planned_ul = page.xpath(
-        '//p/span[text()="StreamingSDK"]/parent::p/following-sibling::ul'
-    )
-
-    for il in summary_ul:
-        summary.append(il.text_content())
-
-    for il in planned_ul:
-        planned.append(il.text_content())
-
-    return summary, planned
+    return summar, planned
 
 
 if __name__ == "__main__":
@@ -87,5 +76,3 @@ if __name__ == "__main__":
     print("Summary:")
     print(json.dumps(summary, indent=4))
 
-    print("Planned:")
-    print(json.dumps(planned, indent=4))
