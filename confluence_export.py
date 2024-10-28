@@ -65,9 +65,9 @@ def _request_confluence_report(report_date: datetime) -> html.Element:
 def get_project_status(report_date: datetime):
     page = _request_confluence_report(report_date)
 
-    summary_ul= page
+    summary = page
 
-    return summar, planned
+    return summary
 
 
 if __name__ == "__main__":
