@@ -71,7 +71,7 @@ def get_project_status(report_date: datetime):
     rows = table_body.find_all('tr')
     for row in rows:
         cells = row.find_all('td')
-        content = cells.find(string=re.compile("SSDK"))
+        content = cells.find_all(string=re.compile("SSDK"))
         cell_data = [cell.get_text(strip=True) for cell in content]
         data.append(cell_data)
 
