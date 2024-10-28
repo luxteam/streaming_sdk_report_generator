@@ -58,12 +58,14 @@ def _request_confluence_report(report_date: datetime) -> html.Element:
 
     page_content = response.json()["results"][0]["body"]["storage"]["value"]
     soup = BeautifulSoup(page_content, 'lxml')
+    data =[]
     table = soup.find(id='main-content')
-    rows = table.find_all('tr')
+    table_body = table.find('tbody')
+    rows = table_body.find_all('tr')
     for row in rows:
         cells = row.find_all('td')
         cell_data = [cell.get_text(strip=True) for cell in cells]
-        return cell_data
+        data.append(cell_data)
 
 
 def get_project_status(report_date: datetime):
