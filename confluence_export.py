@@ -70,7 +70,7 @@ def get_project_status(report_date: datetime):
     table_body = page.find('tbody')
     rows = table_body.find_all(string=re.compile("SSDK:"))
     for row in rows:
-        cell_data = [cell.get_text(strip=True)]
+        cell_data = row.get_text(strip=True)
         data.append(cell_data)
 
     return data
