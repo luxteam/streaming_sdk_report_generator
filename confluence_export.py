@@ -58,22 +58,27 @@ def _request_confluence_report(report_date: datetime) -> html.Element:
 
     page_content = response.json()["results"][0]["body"]["storage"]["value"]
     soup = BeautifulSoup(page_content, 'lxml')
-    data =[]
-    table_body = soup.find('tbody')
-    rows = table_body.find_all('tr')
-    for row in rows:
-        cells = row.find_all('td')
-        cell_data = [cell.get_text(strip=True) for cell in cells]
-        data.append(cell_data)
 
-    return data
+    return soup
 
 
 def get_project_status(report_date: datetime):
     page = _request_confluence_report(report_date)
 
+    data = []
+    table_body = page.find('tbody')
+    rows = table_body.find_all('tr')
+    for row in rows:
+        cells = row.find_all('td')
+        cell_data = [cell.get_text(strip=True) for cell in cells]
+        data.append(cell_data)
+    content = []
+    for row in data:
+        cells = row.find_all('title')
+        cell_data = [cell.get_text(strip=True) for cell in cells]
+        content.append(cell_data)
 
-    return page
+    return content
 
 
 if __name__ == "__main__":
