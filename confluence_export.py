@@ -70,7 +70,7 @@ def get_project_status(report_date: datetime):
     rows = table_body.find_all('tr')
     for row in rows:
         cells = row.find_all('td')
-        cell_data = [cell.get_text(strip=True) for cell in cells]
+        cell_data = [for cell in cells.stripped_strings]
         data.append(cell_data)
 
     return data
