@@ -8,7 +8,7 @@ from datetime import datetime
 from http import HTTPStatus
 
 JENKINS_HOST = os.getenv("JENKINS_HOST", "rpr.cis.luxoft.com")
-CIS_HOST = os.getenv("CIS_HOST", "cis.nas.luxoft.com")
+CIS_HOST = os.getenv("CIS_HOST", "nas.luxoft.com")
 JENKINS_USERNAME = os.environ["JENKINS_USERNAME"]
 JENKINS_TOKEN = os.environ["JENKINS_TOKEN"]
 
