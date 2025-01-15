@@ -127,7 +127,7 @@ def generate_first_letter(
                 continue
 
             since_date = (
-                datetime.today() - timedelta(weeks=1) + timedelta(days=1)
+                datetime.today() - timedelta(weeks=2) + timedelta(days=3)
             ).replace(hour=0, minute=0, second=0, microsecond=0)
 
             latest_report = get_latest_report(job, report, newer_than=since_date)
