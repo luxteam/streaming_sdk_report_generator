@@ -31,7 +31,7 @@ validate_token()
 def _request_confluence_report(report_date: datetime) -> html.Element:
     url = "https://luxproject.luxoft.com/confluence/rest/api/content"
 
-    confluence_report_date = report_date + timedelta(days=3) 
+    confluence_report_date = report_date + timedelta(days=1) 
 
     headers = {
         "Accept": "application/json",
