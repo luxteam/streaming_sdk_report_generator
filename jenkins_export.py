@@ -14,14 +14,14 @@ JENKINS_TOKEN = os.environ["JENKINS_TOKEN"]
 
 
 jobs_names = {
-    Jobs.Full_Samples: "FullSamples-Weekly",
+    # Jobs.Full_Samples: "FullSamples-Weekly",
     Jobs.Win_Full: "StreamingSDK-Windows-WeeklyFull",
     Jobs.Win_APU: "StreamingSDK-APU-WeeklyFull",
     Jobs.Android_Full: "StreamingSDK-Android-WeeklyFull",
     Jobs.Android_Xiaomi_TV: "StreamingSDK-XiaomiTVStick-WeeklyFull",
     Jobs.Android_Chromecast_TV: "StreamingSDK-Chromecast-WeeklyFull",
     Jobs.Ubuntu_Full: "StreamingSDK-Ubuntu-WeeklyFull",
-    Jobs.AMD_Full: "AMDLink-Weekly",
+    # Jobs.AMD_Full: "AMDLink-Weekly",
     Jobs.Win_Latency: "StreamingSDK-LatencyTests",
     Jobs.Win_Long_Term: "StreamingSDK-LongTermTests",
 }
@@ -42,7 +42,7 @@ reports_names = {
 }
 
 jobs_representative_reports = {
-    Jobs.Full_Samples: Reports.PUBG,
+    # Jobs.Full_Samples: Reports.PUBG,
     Jobs.Win_Full: Reports.LoL,
     Jobs.Android_Full: Reports.LoL,
     Jobs.Ubuntu_Full: Reports.Valley_Benchmark_OpenGL,
