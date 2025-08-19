@@ -142,7 +142,7 @@
             <w:szCs w:val="21" />
             <w:lang w:val="en-US" />
           </w:rPr>
-          <w:t>FullSamples-Weekly #9</w:t>
+          <w:t>StreamingSDK-OS-Windows-WeeklyFull #6</w:t>
         </w:r>
       </w:hyperlink>
     </w:p>
@@ -187,7 +187,7 @@
             <w:szCs w:val="21" />
             <w:lang w:val="en-US" />
           </w:rPr>
-          <w:t>FullSamples-Weekly #9</w:t>
+          <w:t>StreamingSDK-OS-Ubuntu-WeeklyFull #5</w:t>
         </w:r>
       </w:hyperlink>
     </w:p>
@@ -265,6 +265,51 @@
             <w:lang w:val="en-US" />
           </w:rPr>
           <w:t>FullSamples-Weekly #9</w:t>
+        </w:r>
+      </w:hyperlink>
+    </w:p>
+    <w:p w14:paraId="2EB068A3" w14:textId="21D97C79" w:rsidR="00196F9F" w:rsidRPr="00196F9F"
+      w:rsidRDefault="00196F9F" w:rsidP="00196F9F">
+      <w:pPr>
+        <w:pStyle w:val="a9" />
+        <w:keepNext />
+        <w:numPr>
+          <w:ilvl w:val="1" />
+          <w:numId w:val="1" />
+        </w:numPr>
+        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" />
+        <w:rPr>
+          <w:rFonts w:ascii="Segoe UI" w:eastAsia="Times New Roman" w:hAnsi="Segoe UI"
+            w:cs="Segoe UI" />
+          <w:color w:val="auto" />
+          <w:sz w:val="21" />
+          <w:szCs w:val="21" />
+          <w:lang w:val="en-US" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Segoe UI" w:eastAsia="Times New Roman" w:hAnsi="Segoe UI"
+            w:cs="Segoe UI" />
+          <w:color w:val="auto" />
+          <w:sz w:val="21" />
+          <w:szCs w:val="21" />
+          <w:lang w:val="en-US" />
+        </w:rPr>
+        <w:t xml:space="preserve">Android weekly report: </w:t>
+      </w:r>
+      <w:hyperlink id="FULL_SAMPLES_ANDROID_WEEKLY_REPORT_LINK" r:id="rId11" w:history="1">
+        <w:proofErr w:type="spellStart" />
+        <w:r w:rsidR="00001D10">
+          <w:rPr>
+            <w:rStyle w:val="aa" />
+            <w:rFonts w:ascii="Segoe UI" w:eastAsia="Times New Roman" w:hAnsi="Segoe UI"
+              w:cs="Segoe UI" />
+            <w:sz w:val="21" />
+            <w:szCs w:val="21" />
+            <w:lang w:val="en-US" />
+          </w:rPr>
+          <w:t>StreamingSDK-Android-FullSamplesWeekly #22</w:t>
         </w:r>
       </w:hyperlink>
     </w:p>
@@ -684,75 +729,7 @@
         </w:r>
       </w:hyperlink>
     </w:p>
-    <w:p w14:paraId="3BE61505" w14:textId="04C14081" w:rsidR="00196F9F" w:rsidRDefault="00316D06"
-      w:rsidP="00196F9F">
-      <w:pPr>
-        <w:pStyle w:val="a9" />
-        <w:keepNext />
-        <w:numPr>
-          <w:ilvl w:val="0" />
-          <w:numId w:val="1" />
-        </w:numPr>
-        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" />
-        <w:spacing w:before="240" w:after="0" />
-        <w:rPr>
-          <w:rFonts w:ascii="Segoe UI" w:eastAsia="Times New Roman" w:hAnsi="Segoe UI"
-            w:cs="Segoe UI" />
-          <w:color w:val="auto" />
-          <w:sz w:val="21" />
-          <w:szCs w:val="21" />
-          <w:lang w:val="en-US" />
-        </w:rPr>
-      </w:pPr>
-      <w:r>
-        <w:rPr>
-          <w:rFonts w:ascii="Segoe UI" w:eastAsia="Times New Roman" w:hAnsi="Segoe UI"
-            w:cs="Segoe UI" />
-          <w:color w:val="auto" />
-          <w:sz w:val="21" />
-          <w:szCs w:val="21" />
-          <w:lang w:val="en-US" />
-        </w:rPr>
-        <w:t>AMD Link:</w:t>
-      </w:r>
-    </w:p>
-    <w:p w14:paraId="2719AF27" w14:textId="64BED53A" w:rsidR="00227745" w:rsidRPr="00EF3B57"
-      w:rsidRDefault="00000000" w:rsidP="00196F9F">
-      <w:pPr>
-        <w:pStyle w:val="a9" />
-        <w:keepNext />
-        <w:numPr>
-          <w:ilvl w:val="1" />
-          <w:numId w:val="1" />
-        </w:numPr>
-        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" />
-        <w:spacing w:after="0" />
-        <w:rPr>
-          <w:rStyle w:val="aa" />
-          <w:rFonts w:ascii="Segoe UI" w:eastAsia="Times New Roman" w:hAnsi="Segoe UI"
-            w:cs="Segoe UI" />
-          <w:color w:val="auto" />
-          <w:sz w:val="21" />
-          <w:szCs w:val="21" />
-          <w:u w:val="none" />
-          <w:lang w:val="en-US" />
-        </w:rPr>
-      </w:pPr>
-      <w:hyperlink id="AMD_FULL_REPORT_LINK" r:id="rId19" w:history="1">
-        <w:proofErr w:type="spellStart" />
-        <w:r w:rsidR="00EC2A07" w:rsidRPr="00EF3B57">
-          <w:rPr>
-            <w:rStyle w:val="aa" />
-            <w:rFonts w:ascii="Segoe UI" w:eastAsia="Times New Roman" w:hAnsi="Segoe UI"
-              w:cs="Segoe UI" />
-            <w:sz w:val="21" />
-            <w:szCs w:val="21" />
-            <w:lang w:val="en-US" />
-          </w:rPr>
-          <w:t>AMDLink-Windows-WeeklyFull #7</w:t>
-        </w:r>
-      </w:hyperlink>
-    </w:p>
+
     <w:p id="SUMMARY_TASK_LIST" w14:paraId="4E47850A" w14:textId="3C20AC96" w:rsidR="002547D4"
       w:rsidRPr="00CA6EA0"
       w:rsidRDefault="002547D4" w:rsidP="002547D4">
