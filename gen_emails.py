@@ -30,25 +30,25 @@ reports_titles = {
 }
 
 jobs_titles = {
-    Jobs.Full_Samples: "Full Samples Streaming SDK autotests",
+    # Jobs.Full_Samples: "Full Samples Streaming SDK autotests",
     Jobs.Win_Full: "Remote Samples Streaming SDK autotests",
     Jobs.Win_APU: "Remote Samples Streaming SDK autotests",
     Jobs.Ubuntu_Full: "Linux Streaming SDK autotests",
     Jobs.Android_Full: "Android Streaming SDK autotests",
     Jobs.Android_Xiaomi_TV: "Android XiaomiTVStick TV Box Streaming SDK autotests",
     Jobs.Android_Chromecast_TV: "Android Chromecast TV Box Streaming SDK autotests",
-    Jobs.AMD_Full: "AMD Link autotests",
+    # Jobs.AMD_Full: "AMD Link autotests",
 }
 
 client_parts = {
-    Jobs.Full_Samples: "RX 6600XT Windows 10 (64bit)",
+    # Jobs.Full_Samples: "RX 6600XT Windows 10 (64bit)",
     Jobs.Win_Full: "RX 6600XT Windows 10 (64bit)",
     Jobs.Win_APU: "APU, Ryzen 7000 Windows 10 (64bit)",
     Jobs.Ubuntu_Full: "RX 6600XT Windows 10 (64bit)",
     Jobs.Android_Full: "Adreno 619 Android (REALME 9 Pro)",
     Jobs.Android_Xiaomi_TV: "XiaomiTVStick TV Box",
     Jobs.Android_Chromecast_TV: "Chromecast TV Box",
-    Jobs.AMD_Full: "RX 6600XT Windows 10 (64bit)",
+    # Jobs.AMD_Full: "RX 6600XT Windows 10 (64bit)",
 }
 
 LETTER2_HTML_TABLE = "ISSUES_TABLE"
@@ -110,14 +110,14 @@ def generate_first_letter(
     insertion_index = parent_elem.index(tables_insertion_position)
 
     for job in [
-        Jobs.Full_Samples,
+        # Jobs.Full_Samples,
         Jobs.Win_Full,
         Jobs.Win_APU,
         Jobs.Android_Full,
         Jobs.Android_Xiaomi_TV,
         Jobs.Android_Chromecast_TV,
         Jobs.Ubuntu_Full,
-        Jobs.AMD_Full,
+        # Jobs.AMD_Full,
     ]:
         # collects info from json reports into dict
         reports_data: dict[str, dict[Reports, dict[str, str]]] = {}
