@@ -31,8 +31,11 @@ reports_titles = {
 
 jobs_titles = {
     # Jobs.Full_Samples: "Full Samples Streaming SDK autotests",
+    # Jobs.Full_Samples_Android: "Full Samples Android Streaming SDK autotests",
+    Jobs.Win_OS: "Open Source Streaming SDK autotests",
     Jobs.Win_Full: "Remote Samples Streaming SDK autotests",
     Jobs.Win_APU: "Remote Samples Streaming SDK autotests",
+    Jobs.Ubuntu_OS: "Open Source Linux Streaming SDK autotests",
     Jobs.Ubuntu_Full: "Linux Streaming SDK autotests",
     Jobs.Android_Full: "Android Streaming SDK autotests",
     Jobs.Android_Xiaomi_TV: "Android XiaomiTVStick TV Box Streaming SDK autotests",

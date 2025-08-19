@@ -1,2 +1,81 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId13" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://nas.luxoft.com/StreamingSDK-OS-Ubuntu-WeeklyFull/2/Test_Report/test_report.html" TargetMode="External"/><Relationship Id="rId18" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://nas.luxoft.com/StreamingSDK-LatencyTests/216/Test_Report/test_report.html" TargetMode="External"/><Relationship Id="rId26" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://ontrack-internal.amd.com/browse/LPSTREAMSDK-1384" TargetMode="External"/><Relationship Id="rId3" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml" Target="../customXml/item3.xml"/><Relationship Id="rId21" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://nas.luxoft.com/StreamingSDK-Android-WeeklyFull/252/Test_Report/test_report.html" TargetMode="External"/><Relationship Id="rId34" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable" Target="fontTable.xml"/><Relationship Id="rId7" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings" Target="settings.xml"/><Relationship Id="rId12" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://nas.luxoft.com/StreamingSDK-OS-Ubuntu-WeeklyFull/5/Test_Report/test_report.html" TargetMode="External"/><Relationship Id="rId17" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://nas.luxoft.com/StreamingSDK-APU-WeeklyFull/75/Test_Report/test_report.html" TargetMode="External"/><Relationship Id="rId25" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://nas.luxoft.com/StreamingSDK-Ubuntu-WeeklyFull/162/Test_Report/test_report.html" TargetMode="External"/><Relationship Id="rId33" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer" Target="footer1.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml" Target="../customXml/item2.xml"/><Relationship Id="rId16" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://nas.luxoft.com/StreamingSDK-Windows-WeeklyFull/419/Test_Report/test_report.html" TargetMode="External"/><Relationship Id="rId20" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://rpr.cis.luxoft.com/job/StreamingSDK-Mouse-WeeklyFull/215/" TargetMode="External"/><Relationship Id="rId29" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://ontrack-internal.amd.com/browse/SWDEV-536967" TargetMode="External"/><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml" Target="../customXml/item1.xml"/><Relationship Id="rId6" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/><Relationship Id="rId11" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://nas.luxoft.com/StreamingSDK-OS-Windows-WeeklyFull/6/Test_Report/test_report.html" TargetMode="External"/><Relationship Id="rId24" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://nas.luxoft.com/StreamingSDK-Ubuntu-WeeklyFull/186/Test_Report/test_report.html" TargetMode="External"/><Relationship Id="rId32" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/header" Target="header1.xml"/><Relationship Id="rId5" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering" Target="numbering.xml"/><Relationship Id="rId15" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://nas.luxoft.com/StreamingSDK-Android-FullSamplesWeekly/22/Test_Report/test_report.html" TargetMode="External"/><Relationship Id="rId23" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://nas.luxoft.com/StreamingSDK-Chromecast-WeeklyFull/99/Test_Report/test_report.html" TargetMode="External"/><Relationship Id="rId28" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://ontrack-internal.amd.com/browse/LPSTREAMSDK-1383" TargetMode="External"/><Relationship Id="rId10" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/endnotes" Target="endnotes.xml"/><Relationship Id="rId19" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="http://rpr.cis.luxoft.com/job/StreamingSDK-LongTermTests/159/" TargetMode="External"/><Relationship Id="rId31" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://luxproject.luxoft.com/jira/browse/STVITT-214" TargetMode="External"/><Relationship Id="rId4" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml" Target="../customXml/item4.xml"/><Relationship Id="rId9" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes" Target="footnotes.xml"/><Relationship Id="rId14" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://nas.luxoft.com/FullSamples-Weekly/124/Test_Report/test_report.html" TargetMode="External"/><Relationship Id="rId22" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://nas.luxoft.com/StreamingSDK-XiaomiTVStick-WeeklyFull/104/Test_Report/test_report.html" TargetMode="External"/><Relationship Id="rId27" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://ontrack-internal.amd.com/browse/SWDEV-545240" TargetMode="External"/><Relationship Id="rId30" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://ontrack-internal.amd.com/browse/SWDEV-502629" TargetMode="External"/><Relationship Id="rId35" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme" Target="theme/theme1.xml"/><Relationship Id="rId8" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings" Target="webSettings.xml"/></Relationships>
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+  <Relationship Id="rId8"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings"
+    Target="webSettings.xml" />
+  <Relationship Id="rId13"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"
+    Target="https://rpr.cis.luxoft.com/job/StreamingSDK-Clumsy/10/" TargetMode="External" />
+  <Relationship Id="rId18"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"
+    Target="https://rpr.cis.luxoft.com/job/StreamingSDK-Ubuntu-WeeklyFull/18/" TargetMode="External" />
+  <Relationship Id="rId3"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml"
+    Target="../customXml/item3.xml" />
+  <Relationship Id="rId21"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer"
+    Target="footer1.xml" />
+  <Relationship Id="rId7"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings"
+    Target="settings.xml" />
+  <Relationship Id="rId12"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"
+    Target="https://rpr.cis.luxoft.com/job/StreamingSDK-Windows-WeeklyFull/162/"
+    TargetMode="External" />
+  <Relationship Id="rId17"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"
+    Target="https://rpr.cis.luxoft.com/job/StreamingSDK-Android-WeeklyFull/56/"
+    TargetMode="External" />
+  <Relationship Id="rId2"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml"
+    Target="../customXml/item2.xml" />
+  <Relationship Id="rId16"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"
+    Target="https://rpr.cis.luxoft.com/job/StreamingSDK-Windows-WeeklyFull/160/"
+    TargetMode="External" />
+  <Relationship Id="rId20"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/header"
+    Target="header1.xml" />
+  <Relationship Id="rId1"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml"
+    Target="../customXml/item1.xml" />
+  <Relationship Id="rId6"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles"
+    Target="styles.xml" />
+  <Relationship Id="rId11"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"
+    Target="https://rpr.cis.luxoft.com/job/FullSamples-Weekly/9/" TargetMode="External" />
+  <Relationship Id="rId5"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering"
+    Target="numbering.xml" />
+  <Relationship Id="rId15"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"
+    Target="https://rpr.cis.luxoft.com/job/StreamingSDKManual/1530/" TargetMode="External" />
+  <Relationship Id="rId23"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme"
+    Target="theme/theme1.xml" />
+  <Relationship Id="rId10"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/endnotes"
+    Target="endnotes.xml" />
+  <Relationship Id="rId19"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"
+    Target="https://rpr.cis.luxoft.com/job/AMDLink-Weekly/7/" TargetMode="External" />
+  <Relationship Id="rId4"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml"
+    Target="../customXml/item4.xml" />
+  <Relationship Id="rId9"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes"
+    Target="footnotes.xml" />
+  <Relationship Id="rId14"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"
+    Target="https://rpr.cis.luxoft.com/job/StreamingSDKManual/1426/" TargetMode="External" />
+  <Relationship Id="rId22"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable"
+    Target="fontTable.xml" />
+  <Relationship Id="rId24"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"
+    Target="https://rpr.cis.luxoft.com/job/" TargetMode="External" />
+  <Relationship Id="rId25"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink"
+    Target="https://rpr.cis.luxoft.com/job/" TargetMode="External" />
+</Relationships>
