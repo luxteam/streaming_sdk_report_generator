@@ -45,8 +45,11 @@ jobs_titles = {
 
 client_parts = {
     # Jobs.Full_Samples: "RX 6600XT Windows 10 (64bit)",
+    # Jobs.Full_Samples_Android: "Adreno 619 Android (REALME 9 Pro)",
+    Jobs.Win_OS: "RX 6600XT Windows 10 (64bit)",
     Jobs.Win_Full: "RX 6600XT Windows 10 (64bit)",
     Jobs.Win_APU: "APU, Ryzen 7000 Windows 10 (64bit)",
+    Jobs.Ubuntu_OS: "RX 6600XT Windows 10 (64bit)",
     Jobs.Ubuntu_Full: "RX 6600XT Windows 10 (64bit)",
     Jobs.Android_Full: "Adreno 619 Android (REALME 9 Pro)",
     Jobs.Android_Xiaomi_TV: "XiaomiTVStick TV Box",
@@ -114,11 +117,14 @@ def generate_first_letter(
 
     for job in [
         # Jobs.Full_Samples,
+        # Jobs.Full_Samples_Android,
+        Jobs.Win_OS,
         Jobs.Win_Full,
         Jobs.Win_APU,
         Jobs.Android_Full,
         Jobs.Android_Xiaomi_TV,
         Jobs.Android_Chromecast_TV,
+        Jobs.Ubuntu_OS,
         Jobs.Ubuntu_Full,
         # Jobs.AMD_Full,
     ]:
