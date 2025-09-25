@@ -26,7 +26,7 @@ SKIP_OBS_CASES_TABLE = {
     Jobs.Android_Full: "SKIPPED_OR_OBSERVED_CASES_ANDROID_TABLE",
     # Jobs.Ubuntu_OS: "SKIPPED_OR_OBSERVED_CASES_LIN_OS_TABLE",
     Jobs.Ubuntu_Full: "SKIPPED_OR_OBSERVED_CASES_LIN_TABLE",
-    Jobs.Full_Samples: "SKIPPED_OR_OBSERVED_CASES_FULL_TABLE",
+    # Jobs.Full_Samples: "SKIPPED_OR_OBSERVED_CASES_FULL_TABLE",
 }
 
 IDS = [
@@ -46,8 +46,8 @@ IDS = [
     SUMMARY_TASK_LIST,
     PLANNED_TASK_LIST,
     ISSUES_BACKLOG_TABLE,
-    SKIP_OBS_CASES_TABLE[Jobs.Full_Samples],
-    SKIP_OBS_CASES_TABLE[Jobs.Full_Samples_Android],
+    # SKIP_OBS_CASES_TABLE[Jobs.Full_Samples],
+    # SKIP_OBS_CASES_TABLE[Jobs.Full_Samples_Android],
     # SKIP_OBS_CASES_TABLE[Jobs.Win_OS],
     SKIP_OBS_CASES_TABLE[Jobs.Win_Full],
     # SKIP_OBS_CASES_TABLE[Jobs.Ubuntu_OS],
