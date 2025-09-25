@@ -30,8 +30,8 @@ reports_titles = {
 }
 
 jobs_titles = {
-    # Jobs.Full_Samples: "Full Samples Streaming SDK autotests",
-    # Jobs.Full_Samples_Android: "Full Samples Android Streaming SDK autotests",
+    Jobs.Full_Samples: "Full Samples Streaming SDK autotests",
+    Jobs.Full_Samples_Android: "Full Samples Android Streaming SDK autotests",
     Jobs.Win_OS: "Open Source Streaming SDK autotests",
     Jobs.Win_Full: "Remote Samples Streaming SDK autotests",
     Jobs.Win_APU: "Remote Samples Streaming SDK autotests",
@@ -44,8 +44,8 @@ jobs_titles = {
 }
 
 client_parts = {
-    # Jobs.Full_Samples: "RX 6600XT Windows 10 (64bit)",
-    # Jobs.Full_Samples_Android: "Adreno 619 Android (REALME 9 Pro)",
+    Jobs.Full_Samples: "RX 6600XT Windows 10 (64bit)",
+    Jobs.Full_Samples_Android: "Adreno 619 Android (REALME 9 Pro)",
     Jobs.Win_OS: "RX 6600XT Windows 10 (64bit)",
     Jobs.Win_Full: "RX 6600XT Windows 10 (64bit)",
     Jobs.Win_APU: "APU, Ryzen 7000 Windows 10 (64bit)",
@@ -116,8 +116,8 @@ def generate_first_letter(
     insertion_index = parent_elem.index(tables_insertion_position)
 
     for job in [
-        # Jobs.Full_Samples,
-        # Jobs.Full_Samples_Android,
+        Jobs.Full_Samples,
+        Jobs.Full_Samples_Android,
         Jobs.Win_OS,
         Jobs.Win_Full,
         Jobs.Win_APU,

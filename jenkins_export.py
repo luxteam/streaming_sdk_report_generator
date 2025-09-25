@@ -14,8 +14,8 @@ JENKINS_TOKEN = os.environ["JENKINS_TOKEN"]
 
 
 jobs_names = {
-    # Jobs.Full_Samples: "FullSamples-Weekly",
-    # Jobs.Full_Samples_Android: "StreamingSDK-Android-FullSamplesWeekly",
+    Jobs.Full_Samples: "FullSamples-Weekly",
+    Jobs.Full_Samples_Android: "StreamingSDK-Android-FullSamplesWeekly",
     Jobs.Win_OS: "StreamingSDK-OS-Windows-WeeklyFull",
     Jobs.Win_Full: "StreamingSDK-Windows-WeeklyFull",
     Jobs.Win_APU: "StreamingSDK-APU-WeeklyFull",
@@ -45,8 +45,8 @@ reports_names = {
 }
 
 jobs_representative_reports = {
-    # Jobs.Full_Samples: Reports.PUBG,
-    # Jobs.Full_Samples_Android: Reports.PUBG,
+    Jobs.Full_Samples: Reports.PUBG,
+    Jobs.Full_Samples_Android: Reports.PUBG,
     Jobs.Win_OS: Reports.LoL,
     Jobs.Win_Full: Reports.LoL,
     Jobs.Android_Full: Reports.LoL,

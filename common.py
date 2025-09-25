@@ -7,19 +7,19 @@ REPORT_FILE_PATH = "./report.docx"
 
 
 class Jobs(Enum):
-    # Full_Samples = 1
-    # Full_Samples_Android = 2
-    Win_OS = 1
-    Win_Full = 2
-    Win_APU = 3
-    Win_Latency = 4
-    Android_Full = 5
-    Ubuntu_OS = 6
-    Ubuntu_Full = 7
+    Full_Samples = 1
+    Full_Samples_Android = 2
+    Win_OS = 3
+    Win_Full = 4
+    Win_APU = 5
+    Win_Latency = 6
+    Android_Full = 7
+    Ubuntu_OS = 8
+    Ubuntu_Full = 9
     # AMD_Full = 6
-    Win_Long_Term = 8
-    Android_Xiaomi_TV = 9
-    Android_Chromecast_TV = 10
+    Win_Long_Term = 10
+    Android_Xiaomi_TV = 11
+    Android_Chromecast_TV = 12
 
 
 class Reports(Enum):

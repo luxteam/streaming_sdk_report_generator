@@ -15,8 +15,8 @@ import ids
 from lxml import etree
 
 jobs_link_title = {
-    # Jobs.Full_Samples: "FullSamples-Weekly #{num}",
-    # Jobs.Full_Samples_Android: "StreamingSDK-Android-FullSamplesWeekly #{num}",
+    Jobs.Full_Samples: "FullSamples-Weekly #{num}",
+    Jobs.Full_Samples_Android: "StreamingSDK-Android-FullSamplesWeekly #{num}",
     Jobs.Win_OS: "StreamingSDK-OS-Windows-WeeklyFull #{num}",
     Jobs.Win_Full: "StreamingSDK-Windows-WeeklyFull #{num}",
     Jobs.Win_APU: "StreamingSDK-APU-WeeklyFull #{num}",
