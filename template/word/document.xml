@@ -174,7 +174,7 @@
           <w:szCs w:val="21" />
           <w:lang w:val="en-US" />
         </w:rPr>
-        <w:t xml:space="preserve">Windows weekly report: </w:t>
+        <w:t xml:space="preserve">Android weekly report: </w:t>
       </w:r>
       <w:hyperlink id="ANDROID_OS_REPORT_LINK" r:id="rId11" w:history="1">
         <w:proofErr w:type="spellStart" />
