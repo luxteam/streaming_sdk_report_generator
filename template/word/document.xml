@@ -174,6 +174,51 @@
           <w:szCs w:val="21" />
           <w:lang w:val="en-US" />
         </w:rPr>
+        <w:t xml:space="preserve">Windows weekly report: </w:t>
+      </w:r>
+      <w:hyperlink id="ANDROID_OS_REPORT_LINK" r:id="rId11" w:history="1">
+        <w:proofErr w:type="spellStart" />
+        <w:r w:rsidR="00001D10">
+          <w:rPr>
+            <w:rStyle w:val="aa" />
+            <w:rFonts w:ascii="Segoe UI" w:eastAsia="Times New Roman" w:hAnsi="Segoe UI"
+              w:cs="Segoe UI" />
+            <w:sz w:val="21" />
+            <w:szCs w:val="21" />
+            <w:lang w:val="en-US" />
+          </w:rPr>
+          <w:t>StreamingSDK-OS-Android-Weekly #6</w:t>
+        </w:r>
+      </w:hyperlink>
+    </w:p>
+    <w:p w14:paraId="2EB068A3" w14:textId="21D97C79" w:rsidR="00196F9F" w:rsidRPr="00196F9F"
+      w:rsidRDefault="00196F9F" w:rsidP="00196F9F">
+      <w:pPr>
+        <w:pStyle w:val="a9" />
+        <w:keepNext />
+        <w:numPr>
+          <w:ilvl w:val="1" />
+          <w:numId w:val="1" />
+        </w:numPr>
+        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" />
+        <w:rPr>
+          <w:rFonts w:ascii="Segoe UI" w:eastAsia="Times New Roman" w:hAnsi="Segoe UI"
+            w:cs="Segoe UI" />
+          <w:color w:val="auto" />
+          <w:sz w:val="21" />
+          <w:szCs w:val="21" />
+          <w:lang w:val="en-US" />
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Segoe UI" w:eastAsia="Times New Roman" w:hAnsi="Segoe UI"
+            w:cs="Segoe UI" />
+          <w:color w:val="auto" />
+          <w:sz w:val="21" />
+          <w:szCs w:val="21" />
+          <w:lang w:val="en-US" />
+        </w:rPr>
         <w:t xml:space="preserve">Ubuntu weekly report: </w:t>
       </w:r>
       <w:hyperlink id="UBUNTU_OS_REPORT_LINK" r:id="rId11" w:history="1">

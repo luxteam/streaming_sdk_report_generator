@@ -25,7 +25,7 @@ class Jobs(Enum):
 
 class Reports(Enum):
     summary = 1
-    #PUBG = 2
+    PUBG = 2
     Dota2_DX11 = 3
     Dota2_Vulkan = 4
     LoL = 5

@@ -17,7 +17,7 @@ class LetterFormat(Enum):
 
 
 reports_titles = {
-    #Reports.PUBG: "PUBG Report",
+    Reports.PUBG: "PUBG Report",
     Reports.Dota2_DX11: "Dota 2 DX11 Report",
     Reports.Dota2_Vulkan: "Dota 2 Vulkan Report",
     Reports.LoL: "League of Legends Report",
