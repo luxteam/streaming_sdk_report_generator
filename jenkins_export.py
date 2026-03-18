@@ -33,7 +33,7 @@ jobs_names = {
 
 reports_names = {
     Reports.summary: "Test_Report",
-    Reports.PUBG: "Test_Report_PUBG",
+    #Reports.PUBG: "Test_Report_PUBG",
     Reports.Dota2_DX11: "Test_Report_Dota2DX11",
     Reports.Dota2_Vulkan: "Test_Report_Dota2Vulkan",
     Reports.LoL: "Test_Report_LoL",
@@ -46,8 +46,8 @@ reports_names = {
 }
 
 jobs_representative_reports = {
-    Jobs.Full_Samples: Reports.PUBG,
-    Jobs.Full_Samples_Android: Reports.PUBG,
+    Jobs.Full_Samples: Reports.Heaven_Benchmark_DX9,
+    Jobs.Full_Samples_Android: Reports.Heaven_Benchmark_DX9,
     Jobs.Win_OS: Reports.LoL,
     Jobs.Win_Full: Reports.LoL,
     Jobs.Android_OS: Reports.Heaven_Benchmark_DX9,
