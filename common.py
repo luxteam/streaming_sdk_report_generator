@@ -13,13 +13,14 @@ class Jobs(Enum):
     Win_Full = 4
     Win_APU = 5
     Win_Latency = 6
-    Android_Full = 7
-    Ubuntu_OS = 8
-    Ubuntu_Full = 9
+    Android_OS = 7
+    Android_Full = 8
+    Ubuntu_OS = 9
+    Ubuntu_Full = 10
     # AMD_Full = 6
-    Win_Long_Term = 10
-    Android_Xiaomi_TV = 11
-    Android_Chromecast_TV = 12
+    Win_Long_Term = 11
+    Android_Xiaomi_TV = 12
+    Android_Chromecast_TV = 13
 
 
 class Reports(Enum):

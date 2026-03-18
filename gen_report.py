@@ -20,6 +20,7 @@ jobs_link_title = {
     Jobs.Win_OS: "StreamingSDK-OS-Windows-WeeklyFull #{num}",
     Jobs.Win_Full: "StreamingSDK-Windows-WeeklyFull #{num}",
     Jobs.Win_APU: "StreamingSDK-APU-WeeklyFull #{num}",
+    Jobs.Android_OS: "StreamingSDK-OS-Android-Weekly #{num}",
     Jobs.Android_Full: "StreamingSDK-Android-Weekly #{num}",
     Jobs.Android_Xiaomi_TV: "StreamingSDK-XiaomiTVStick-Weekly #{num}",
     Jobs.Android_Chromecast_TV: "StreamingSDK-Chromecast-Weekly #{num}",
