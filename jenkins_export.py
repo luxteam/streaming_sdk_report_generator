@@ -50,7 +50,7 @@ jobs_representative_reports = {
     Jobs.Full_Samples_Android: Reports.PUBG,
     Jobs.Win_OS: Reports.LoL,
     Jobs.Win_Full: Reports.LoL,
-    Jobs.Android_OS: Reports.PUBG,
+    Jobs.Android_OS: Reports.Heaven_Benchmark_DX9,
     Jobs.Android_Full: Reports.LoL,
     Jobs.Ubuntu_OS: Reports.Valley_Benchmark_OpenGL,
     Jobs.Ubuntu_Full: Reports.Valley_Benchmark_OpenGL,
